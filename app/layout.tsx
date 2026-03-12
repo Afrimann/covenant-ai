@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { ClerkProvider } from "@clerk/nextjs";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -15,7 +18,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Covenant AI | Biblical Research Platform",
+  title: "ScriptureAI | Biblical Research Platform",
   description:
     "AI-powered biblical research for Christians, pastors, and scholars.",
 };
@@ -23,12 +26,15 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${cormorant.variable} antialiased`}>
-        {children}
+        <ClerkProvider signInUrl="/login" signUpUrl="/signup">
+          {children}
+          <Toaster richColors position="top-right" />
+        </ClerkProvider>
       </body>
     </html>
   );
