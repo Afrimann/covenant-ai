@@ -25,27 +25,29 @@ function LivePreview() {
       className="rounded-2xl border border-(--color-border) bg-white/90 p-5 shadow-[0_20px_40px_rgba(11,31,58,0.08)]"
     >
       <div className="flex items-center justify-between">
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-(--color-accent)">
           Live AI Preview
         </span>
-        <span className="text-xs text-[color:var(--color-muted)]">Covenant AI</span>
+        <span className="text-xs text-(--color-muted)">Covenant AI</span>
       </div>
       <div className="mt-4 space-y-4">
-        <div className="rounded-xl bg-[color:var(--color-background)] p-3">
-          <p className="text-xs font-semibold text-[color:var(--color-primary)]">You</p>
-          <p className="mt-1 text-sm text-[color:var(--color-primary)]">
+        <div className="rounded-xl bg-(--color-background) p-3">
+          <p className="text-xs font-semibold text-(--color-primary)">You</p>
+          <p className="mt-1 text-sm text-(--color-primary)">
             Explain the Trinity
           </p>
         </div>
-        <div className="rounded-xl border border-[color:var(--color-border)] bg-white p-3">
-          <p className="text-xs font-semibold text-[color:var(--color-primary)]">AI Research Preview</p>
-          <p className="mt-1 text-sm text-[color:var(--color-muted)]">
+        <div className="rounded-xl border border-(--color-border) bg-white p-3">
+          <p className="text-xs font-semibold text-(--color-primary)">
+            AI Research Preview
+          </p>
+          <p className="mt-1 text-sm text-(--color-muted)">
             The Trinity reveals one God in three persons. See{" "}
-            <span className="font-serif text-[color:var(--color-primary)]">
+            <span className="font-serif text-(--color-primary)">
               Matthew 28:19
             </span>{" "}
             and{" "}
-            <span className="font-serif text-[color:var(--color-primary)]">
+            <span className="font-serif text-(--color-primary)">
               2 Corinthians 13:14
             </span>{" "}
             for the unified witness of Father, Son, and Holy Spirit.
@@ -58,7 +60,7 @@ function LivePreview() {
           <input
             id="preview-input"
             aria-label="Live preview input"
-            className="w-full rounded-full border border-[color:var(--color-border)] bg-white px-4 py-2 text-sm text-[color:var(--color-primary)] placeholder:text-[color:var(--color-muted)]"
+            className="w-full rounded-full border border-(--color-border) bg-white px-4 py-2 text-sm text-(--color-primary) placeholder:text-(--color-muted)"
             value="Explain the Trinity"
             readOnly
           />
@@ -81,19 +83,19 @@ export default function Hero() {
           >
             <motion.span
               variants={fadeUp}
-              className="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-border)] bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--color-primary)]"
+              className="inline-flex items-center gap-2 rounded-full border border-(--color-border) bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
             >
               Trusted research, reverent tone
             </motion.span>
             <motion.h1
               variants={fadeUp}
-              className="text-4xl font-semibold leading-tight text-[color:var(--color-primary)] sm:text-5xl lg:text-6xl"
+              className="text-4xl font-semibold leading-tight text-(--color-primary) sm:text-5xl lg:text-6xl"
             >
               AI-Powered Biblical Research for Christians, Pastors, and Scholars
             </motion.h1>
             <motion.p
               variants={fadeUp}
-              className="max-w-xl text-lg leading-relaxed text-[color:var(--color-muted)]"
+              className="max-w-xl text-lg leading-relaxed text-(--color-muted)"
             >
               Study scripture deeper, prepare sermons faster, and explore
               Christian theology with an intelligent research assistant grounded
@@ -103,14 +105,17 @@ export default function Hero() {
               <motion.a
                 href="#pricing"
                 className="rounded-full bg-[color:var(--color-primary)] px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_40px_rgba(11,31,58,0.18)]"
-                whileHover={{ y: -2, boxShadow: "0 24px 40px rgba(11,31,58,0.25)" }}
+                whileHover={{
+                  y: -2,
+                  boxShadow: "0 24px 40px rgba(11,31,58,0.25)",
+                }}
                 whileTap={{ scale: 0.98 }}
               >
                 Start Free
               </motion.a>
               <motion.a
                 href="#how-it-works"
-                className="rounded-full border border-[color:var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[color:var(--color-primary)]"
+                className="rounded-full border border-(--color-border) bg-white px-6 py-3 text-sm font-semibold text-(--color-primary)"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -119,9 +124,9 @@ export default function Hero() {
             </motion.div>
             <motion.div
               variants={fadeUp}
-              className="flex flex-wrap gap-6 text-sm text-[color:var(--color-muted)]"
+              className="flex flex-wrap gap-6 text-sm text-(--color-muted)"
             >
-              <span className="font-semibold text-[color:var(--color-primary)]">
+              <span className="font-semibold text-(--color-primary)">
                 Scripture-first answers
               </span>
               <span>Multi-agent research</span>
@@ -138,33 +143,33 @@ export default function Hero() {
             <div className="absolute -left-8 top-10 hidden h-32 w-32 rounded-full bg-[color:var(--color-accent)]/15 blur-3xl lg:block" />
             <div className="absolute -bottom-10 right-0 hidden h-40 w-40 rounded-full bg-[color:var(--color-primary)]/10 blur-3xl lg:block" />
 
-            <div className="rounded-3xl border border-[color:var(--color-border)] bg-white/90 p-6 shadow-[0_24px_60px_rgba(11,31,58,0.12)]">
+            <div className="rounded-3xl border border-(--color-border) bg-white/90 p-6 shadow-[0_24px_60px_rgba(11,31,58,0.12)]">
               <div className="mb-5 flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-semibold text-[color:var(--color-primary)]">
+                  <p className="text-sm font-semibold text-(--color-primary)">
                     Covenant AI Dashboard
                   </p>
-                  <p className="text-xs text-[color:var(--color-muted)]">
+                  <p className="text-xs text-(--color-muted)">
                     Live biblical research workspace
                   </p>
                 </div>
-                <span className="rounded-full bg-[color:var(--color-background)] px-3 py-1 text-xs font-semibold text-[color:var(--color-primary)]">
+                <span className="rounded-full bg-[color:var(--color-background)] px-3 py-1 text-xs font-semibold text-(--color-primary)">
                   Secure
                 </span>
               </div>
               <div className="grid gap-4 lg:grid-cols-2">
                 <motion.div
                   whileHover={{ y: -4 }}
-                  className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-background)] p-4"
+                  className="rounded-2xl border border-(--color-border) bg-[color:var(--color-background)] p-4"
                 >
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-(--color-accent)">
                     AI Chat Interface
                   </p>
-                  <div className="mt-4 space-y-3 text-sm text-[color:var(--color-muted)]">
-                    <div className="rounded-lg bg-white px-3 py-2 text-[color:var(--color-primary)]">
+                  <div className="mt-4 space-y-3 text-sm text-(--color-muted)">
+                    <div className="rounded-lg bg-white px-3 py-2 text-(--color-primary)">
                       Summarize Romans 8:28.
                     </div>
-                    <div className="rounded-lg border border-[color:var(--color-border)] bg-white px-3 py-2">
+                    <div className="rounded-lg border border-(--color-border) bg-white px-3 py-2">
                       All things work together for good in Christ.
                     </div>
                   </div>
@@ -172,24 +177,24 @@ export default function Hero() {
                 <div className="space-y-4">
                   <motion.div
                     whileHover={{ y: -4 }}
-                    className="rounded-2xl border border-[color:var(--color-border)] bg-white p-4"
+                    className="rounded-2xl border border-(--color-border) bg-white p-4"
                   >
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-(--color-accent)">
                       Sermon Generator
                     </p>
-                    <ul className="mt-3 space-y-2 text-sm text-[color:var(--color-muted)]">
+                    <ul className="mt-3 space-y-2 text-sm text-(--color-muted)">
                       <li>Outline, illustrations, application</li>
                       <li>Supporting verses ready</li>
                     </ul>
                   </motion.div>
                   <motion.div
                     whileHover={{ y: -4 }}
-                    className="rounded-2xl border border-[color:var(--color-border)] bg-white p-4"
+                    className="rounded-2xl border border-(--color-border) bg-white p-4"
                   >
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--color-accent)]">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-(--color-accent)">
                       Scripture References
                     </p>
-                    <p className="mt-3 text-sm text-[color:var(--color-muted)]">
+                    <p className="mt-3 text-sm text-(--color-muted)">
                       Cross-links, parallels, and historical context.
                     </p>
                   </motion.div>
@@ -206,5 +211,3 @@ export default function Hero() {
     </section>
   );
 }
-
-

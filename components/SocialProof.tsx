@@ -21,10 +21,10 @@ export default function SocialProof() {
           className="space-y-8"
         >
           <div className="flex flex-col gap-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--color-accent)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-(--color-accent)">
               Built for those who study and teach the Word.
             </p>
-            <h2 className="text-3xl font-semibold text-[color:var(--color-primary)]">
+            <h2 className="text-3xl font-semibold text-(--color-primary)">
               A trusted companion for every calling
             </h2>
           </div>
@@ -34,7 +34,7 @@ export default function SocialProof() {
                 key={audience}
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                className="rounded-2xl border border-[color:var(--color-border)] bg-white/90 p-5 text-sm font-semibold text-[color:var(--color-primary)] shadow-[0_16px_36px_rgba(11,31,58,0.08)]"
+                className="rounded-2xl border border-(--color-border) bg-white/90 p-5 text-sm font-semibold text-(--color-primary) shadow-[0_16px_36px_rgba(11,31,58,0.08)]"
               >
                 {audience}
               </motion.div>
@@ -45,5 +45,3 @@ export default function SocialProof() {
     </section>
   );
 }
-
-

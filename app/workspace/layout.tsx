@@ -134,7 +134,7 @@ export default function WorkspaceLayout({ children }: { children: React.ReactNod
 
   return (
     <div
-      className="min-h-screen bg-slate-50"
+      className="min-h-screen bg-[color:var(--color-background)]"
       style={{ ["--sidebar-width" as string]: `${sidebarWidth}px` }}
     >
       <motion.aside
@@ -308,7 +308,7 @@ export default function WorkspaceLayout({ children }: { children: React.ReactNod
       </AnimatePresence>
 
       <div className="min-h-screen md:pl-[var(--sidebar-width)]">
-        <header className="flex items-center justify-between border-b border-slate-200 bg-white/80 px-6 py-4 shadow-sm md:hidden">
+        <header className="fixed left-0 right-0 top-0 z-30 flex items-center justify-between border-b border-slate-200 bg-white/85 px-6 py-4 shadow-sm backdrop-blur md:hidden">
           <button
             type="button"
             onClick={() => setIsMobileOpen(true)}
@@ -329,7 +329,7 @@ export default function WorkspaceLayout({ children }: { children: React.ReactNod
           <UserMenu user={user} size="sm" />
         </header>
 
-        <main className="px-6 pb-10 pt-6">
+        <main className="px-6 pb-10 pt-24 md:pt-6">
           <div className="hidden justify-end md:flex">
             <UserMenu user={user} />
           </div>

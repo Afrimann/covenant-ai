@@ -25,7 +25,7 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "backdrop-blur bg-white/80 shadow-sm border-b border-[color:var(--color-border)]"
+          ? "backdrop-blur bg-white/80 shadow-sm border-b border-(--color-border)"
           : "bg-white/30"
       }`}
     >
@@ -34,20 +34,20 @@ export default function Navbar() {
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--color-primary)] text-sm font-semibold text-white">
             CA
           </span>
-          <span className="text-lg font-semibold tracking-tight text-[color:var(--color-primary)]">
+          <span className="text-lg font-semibold tracking-tight text-(--color-primary)">
             Covenant AI
           </span>
         </a>
 
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-8 text-sm font-medium text-[color:var(--color-primary)] lg:flex"
+          className="hidden items-center gap-8 text-sm font-medium text-(--color-primary) lg:flex"
         >
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="transition-colors hover:text-[color:var(--color-accent)]"
+              className="transition-colors hover:text-(--color-accent)"
             >
               {item.label}
             </a>
@@ -65,7 +65,7 @@ export default function Navbar() {
         <button
           type="button"
           aria-label="Toggle navigation"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--color-border)] text-[color:var(--color-primary)] lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-(--color-border) text-(--color-primary) lg:hidden"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
           <svg
@@ -91,14 +91,14 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="border-t border-[color:var(--color-border)] bg-white/95 backdrop-blur lg:hidden"
+            className="border-t border-(--color-border) bg-white/95 backdrop-blur lg:hidden"
           >
-            <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-6 text-sm font-medium text-[color:var(--color-primary)]">
+            <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-6 text-sm font-medium text-(--color-primary)">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="transition-colors hover:text-[color:var(--color-accent)]"
+                  className="transition-colors hover:text-(--color-accent)"
                 >
                   {item.label}
                 </a>
@@ -106,7 +106,10 @@ export default function Navbar() {
               <motion.a
                 href="#cta"
                 className="inline-flex w-fit rounded-full bg-[color:var(--color-primary)] px-5 py-2 text-sm font-semibold text-white shadow-sm"
-                whileHover={{ y: -2, boxShadow: "0 12px 24px rgba(11,31,58,0.2)" }}
+                whileHover={{
+                  y: -2,
+                  boxShadow: "0 12px 24px rgba(11,31,58,0.2)",
+                }}
                 whileTap={{ scale: 0.98 }}
               >
                 Get Started
@@ -118,5 +121,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-

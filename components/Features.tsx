@@ -10,7 +10,8 @@ const features = [
   },
   {
     title: "Sermon Builder",
-    description: "Generate sermon outlines, supporting verses, illustrations, and teaching notes.",
+    description:
+      "Generate sermon outlines, supporting verses, illustrations, and teaching notes.",
     bullets: [
       "Sermon outlines",
       "Supporting verses",
@@ -47,10 +48,10 @@ export default function Features() {
           className="space-y-10"
         >
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--color-accent)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-(--color-accent)">
               Features
             </p>
-            <h2 className="mt-3 text-3xl font-semibold text-[color:var(--color-primary)]">
+            <h2 className="mt-3 text-3xl font-semibold text-(--color-primary)">
               Everything you need for faithful study
             </h2>
           </div>
@@ -59,18 +60,21 @@ export default function Features() {
             {features.map((feature) => (
               <motion.div
                 key={feature.title}
-                whileHover={{ y: -6, boxShadow: "0 18px 40px rgba(11,31,58,0.12)" }}
+                whileHover={{
+                  y: -6,
+                  boxShadow: "0 18px 40px rgba(11,31,58,0.12)",
+                }}
                 transition={{ type: "spring", stiffness: 240, damping: 20 }}
-                className="rounded-2xl border border-[color:var(--color-border)] bg-white/90 p-6"
+                className="rounded-2xl border border-(--color-border) bg-white/90 p-6"
               >
-                <h3 className="text-lg font-semibold text-[color:var(--color-primary)]">
+                <h3 className="text-lg font-semibold text-(--color-primary)">
                   {feature.title}
                 </h3>
-                <p className="mt-3 text-sm text-[color:var(--color-muted)]">
+                <p className="mt-3 text-sm text-(--color-muted)">
                   {feature.description}
                 </p>
                 {feature.bullets && (
-                  <ul className="mt-4 space-y-2 text-sm text-[color:var(--color-primary)]">
+                  <ul className="mt-4 space-y-2 text-sm text-(--color-primary)">
                     {feature.bullets.map((bullet) => (
                       <li key={bullet} className="flex items-center gap-2">
                         <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--color-accent)]" />
@@ -87,5 +91,3 @@ export default function Features() {
     </section>
   );
 }
-
-

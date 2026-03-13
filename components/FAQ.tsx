@@ -35,10 +35,10 @@ export default function FAQ() {
           className="space-y-10"
         >
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--color-accent)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-(--color-accent)">
               FAQ
             </p>
-            <h2 className="mt-3 text-3xl font-semibold text-[color:var(--color-primary)]">
+            <h2 className="mt-3 text-3xl font-semibold text-(--color-primary)">
               Answers for faithful study
             </h2>
           </div>
@@ -49,19 +49,19 @@ export default function FAQ() {
               return (
                 <div
                   key={faq.question}
-                  className="rounded-2xl border border-[color:var(--color-border)] bg-white/95"
+                  className="rounded-2xl border border-(--color-border) bg-white/95"
                 >
                   <button
                     type="button"
                     aria-expanded={isOpen}
                     aria-controls={`faq-panel-${index}`}
-                    className="flex w-full items-center justify-between px-6 py-4 text-left text-sm font-semibold text-[color:var(--color-primary)]"
+                    className="flex w-full items-center justify-between px-6 py-4 text-left text-sm font-semibold text-(--color-primary)"
                     onClick={() =>
                       setOpenIndex((prev) => (prev === index ? null : index))
                     }
                   >
                     {faq.question}
-                    <span className="text-lg text-[color:var(--color-accent)]">
+                    <span className="text-lg text-(--color-accent)">
                       {isOpen ? "-" : "+"}
                     </span>
                   </button>
@@ -75,7 +75,7 @@ export default function FAQ() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-4 text-sm text-[color:var(--color-muted)]">
+                        <div className="px-6 pb-4 text-sm text-(--color-muted)">
                           {faq.answer}
                         </div>
                       </motion.div>
@@ -90,5 +90,3 @@ export default function FAQ() {
     </section>
   );
 }
-
-

@@ -85,10 +85,10 @@ export default function Problem() {
           className="space-y-10"
         >
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--color-accent)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-(--color-accent)">
               The problem
             </p>
-            <h2 className="mt-3 text-3xl font-semibold text-[color:var(--color-primary)]">
+            <h2 className="mt-3 text-3xl font-semibold text-(--color-primary)">
               Studying the Bible deeply takes time.
             </h2>
           </div>
@@ -100,17 +100,17 @@ export default function Problem() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5 }}
-                className="rounded-2xl border border-[color:var(--color-border)] bg-white/90 p-6"
+                className="rounded-2xl border border-(--color-border) bg-white/90 p-6"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:var(--color-background)] text-[color:var(--color-primary)]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:var(--color-background)] text-(--color-primary)">
                     {problem.icon}
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-[color:var(--color-primary)]">
+                    <h3 className="text-base font-semibold text-(--color-primary)">
                       {problem.title}
                     </h3>
-                    <p className="mt-2 text-sm text-[color:var(--color-muted)]">
+                    <p className="mt-2 text-sm text-(--color-muted)">
                       {problem.description}
                     </p>
                   </div>
@@ -123,5 +123,3 @@ export default function Problem() {
     </section>
   );
 }
-
-

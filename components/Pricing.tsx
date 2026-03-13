@@ -7,21 +7,13 @@ const plans = [
     title: "Free",
     price: "$0",
     description: "For starting your study journey.",
-    features: [
-      "Limited AI questions",
-      "Daily devotional",
-      "Scripture search",
-    ],
+    features: ["Limited AI questions", "Daily devotional", "Scripture search"],
   },
   {
     title: "Pro",
     price: "$29",
     description: "For pastors and teachers.",
-    features: [
-      "Unlimited research",
-      "Sermon generator",
-      "Study plans",
-    ],
+    features: ["Unlimited research", "Sermon generator", "Study plans"],
     recommended: true,
   },
   {
@@ -48,10 +40,10 @@ export default function Pricing() {
           className="space-y-10"
         >
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--color-accent)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-(--color-accent)">
               Pricing
             </p>
-            <h2 className="mt-3 text-3xl font-semibold text-[color:var(--color-primary)]">
+            <h2 className="mt-3 text-3xl font-semibold text-(--color-primary)">
               Simple plans for every calling
             </h2>
           </div>
@@ -65,26 +57,26 @@ export default function Pricing() {
                 className={`relative rounded-2xl border bg-white/95 p-6 shadow-[0_18px_40px_rgba(11,31,58,0.1)] ${
                   plan.recommended
                     ? "border-[color:var(--color-accent)]"
-                    : "border-[color:var(--color-border)]"
+                    : "border-(--color-border)"
                 }`}
               >
                 {plan.recommended && (
-                  <span className="absolute -top-3 left-6 rounded-full bg-[color:var(--color-accent)] px-3 py-1 text-xs font-semibold text-[color:var(--color-primary)]">
+                  <span className="absolute -top-3 left-6 rounded-full bg-[color:var(--color-accent)] px-3 py-1 text-xs font-semibold text-(--color-primary)">
                     Recommended
                   </span>
                 )}
                 <div className="flex items-baseline justify-between">
-                  <h3 className="text-lg font-semibold text-[color:var(--color-primary)]">
+                  <h3 className="text-lg font-semibold text-(--color-primary)">
                     {plan.title}
                   </h3>
-                  <span className="text-2xl font-semibold text-[color:var(--color-primary)]">
+                  <span className="text-2xl font-semibold text-(--color-primary)">
                     {plan.price}
                   </span>
                 </div>
-                <p className="mt-2 text-sm text-[color:var(--color-muted)]">
+                <p className="mt-2 text-sm text-(--color-muted)">
                   {plan.description}
                 </p>
-                <ul className="mt-5 space-y-2 text-sm text-[color:var(--color-primary)]">
+                <ul className="mt-5 space-y-2 text-sm text-(--color-primary)">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--color-accent)]" />
@@ -97,7 +89,7 @@ export default function Pricing() {
                   className={`mt-6 inline-flex w-full items-center justify-center rounded-full px-5 py-2 text-sm font-semibold ${
                     plan.recommended
                       ? "bg-[color:var(--color-primary)] text-white"
-                      : "border border-[color:var(--color-border)] text-[color:var(--color-primary)]"
+                      : "border border-(--color-border) text-(--color-primary)"
                   }`}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
@@ -112,5 +104,3 @@ export default function Pricing() {
     </section>
   );
 }
-
-

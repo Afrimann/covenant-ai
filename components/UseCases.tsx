@@ -29,10 +29,10 @@ export default function UseCases() {
           className="space-y-10"
         >
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--color-accent)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-(--color-accent)">
               Use cases
             </p>
-            <h2 className="mt-3 text-3xl font-semibold text-[color:var(--color-primary)]">
+            <h2 className="mt-3 text-3xl font-semibold text-(--color-primary)">
               Built for every stage of ministry
             </h2>
           </div>
@@ -43,15 +43,15 @@ export default function UseCases() {
                 key={useCase.title}
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 240, damping: 20 }}
-                className="rounded-2xl border border-[color:var(--color-border)] bg-white/90 p-6"
+                className="rounded-2xl border border-(--color-border) bg-white/90 p-6"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[color:var(--color-background)] text-lg font-semibold text-[color:var(--color-primary)]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[color:var(--color-background)] text-lg font-semibold text-(--color-primary)">
                   {useCase.title.slice(0, 1)}
                 </div>
-                <h3 className="mt-4 text-lg font-semibold text-[color:var(--color-primary)]">
+                <h3 className="mt-4 text-lg font-semibold text-(--color-primary)">
                   {useCase.title}
                 </h3>
-                <p className="mt-2 text-sm text-[color:var(--color-muted)]">
+                <p className="mt-2 text-sm text-(--color-muted)">
                   {useCase.description}
                 </p>
               </motion.div>
@@ -62,5 +62,3 @@ export default function UseCases() {
     </section>
   );
 }
-
-

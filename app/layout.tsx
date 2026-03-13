@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { ClerkProvider } from "@clerk/nextjs";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
-import { Toaster } from "sonner";
+import Providers from "./providers";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -31,10 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${cormorant.variable} antialiased`}>
-        <ClerkProvider signInUrl="/login" signUpUrl="/signup">
-          {children}
-          <Toaster richColors position="top-right" />
-        </ClerkProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

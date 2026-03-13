@@ -11,7 +11,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
-          className="relative overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-[color:var(--color-primary)] px-8 py-12 text-white"
+          className="relative overflow-hidden rounded-3xl border border-(--color-border) bg-[color:var(--color-primary)] px-8 py-12 text-white"
         >
           <div className="absolute -right-24 -top-24 h-48 w-48 rounded-full bg-[color:var(--color-accent)]/30 blur-3xl" />
           <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-white/10 blur-3xl" />
@@ -25,7 +25,8 @@ export default function CTA() {
                 Start Studying Scripture Smarter Today
               </h2>
               <p className="mt-3 text-sm text-white/80">
-                Join pastors and scholars using Covenant AI to prepare, study, and teach with confidence.
+                Join pastors and scholars using Covenant AI to prepare, study,
+                and teach with confidence.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -33,7 +34,7 @@ export default function CTA() {
                 <div className="absolute inset-0 rounded-full bg-[color:var(--color-accent)]/40 blur-xl" />
                 <motion.a
                   href="#pricing"
-                  className="relative inline-flex items-center justify-center rounded-full bg-[color:var(--color-accent)] px-6 py-3 text-sm font-semibold text-[color:var(--color-primary)]"
+                  className="relative inline-flex items-center justify-center rounded-full bg-[color:var(--color-accent)] px-6 py-3 text-sm font-semibold text-(--color-primary)"
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -55,5 +56,3 @@ export default function CTA() {
     </section>
   );
 }
-
-
