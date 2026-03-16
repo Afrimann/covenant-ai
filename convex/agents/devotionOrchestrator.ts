@@ -14,8 +14,26 @@ export type OrchestratedDevotion = {
   theme: string;
 };
 
-export async function runDevotionOrchestrator(args: { date: string }): Promise<OrchestratedDevotion> {
-  const scriptureSelection = await runScriptureAgent({ date: args.date });
+export type DevotionAvoidance = {
+  scriptures?: string[];
+  themes?: string[];
+  titles?: string[];
+};
+
+export type DevotionOrchestratorInput = {
+  date: string;
+  avoid?: DevotionAvoidance;
+  attempt?: number;
+};
+
+export async function runDevotionOrchestrator(
+  args: DevotionOrchestratorInput,
+): Promise<OrchestratedDevotion> {
+  const scriptureSelection = await runScriptureAgent({
+    date: args.date,
+    avoid: args.avoid,
+    attempt: args.attempt,
+  });
   const reflection = await runReflectionAgent({
     title: scriptureSelection.title,
     scripture: scriptureSelection.scripture,

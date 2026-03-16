@@ -30,8 +30,7 @@ function formatDate(dateString: string) {
 }
 
 export default function DailyDevotionsPage() {
-  const today = useMemo(() => new Date().toISOString().slice(0, 10), []);
-  const devotion = useQuery(api.devotions.getDevotionByDate, { date: today });
+  const devotion = useQuery(api.devotions.getLatestDevotion, {});
   const getOrCreateDevotion = useAction(api.devotions.getOrCreateDailyDevotion);
   const explainDevotion = useAction(api.devotions.explainDevotion);
   const [hasRequested, setHasRequested] = useState(false);
@@ -46,7 +45,7 @@ export default function DailyDevotionsPage() {
       setHasRequested(true);
       setIsGenerating(true);
       setErrorMessage(null);
-      getOrCreateDevotion({ date: today })
+      getOrCreateDevotion({})
         .catch((error) => {
           setErrorMessage(
             error instanceof Error ? error.message : "Unable to generate today's devotion.",
@@ -56,7 +55,7 @@ export default function DailyDevotionsPage() {
           setIsGenerating(false);
         });
     }
-  }, [devotion, getOrCreateDevotion, hasRequested, today]);
+  }, [devotion, getOrCreateDevotion, hasRequested]);
 
   useEffect(() => {
     setExplanation(null);

@@ -11,5 +11,26 @@ export default defineSchema({
     theme: v.string(),
     createdAt: v.number(),
   }).index("by_date", ["date"]),
+  chats: defineTable({
+    userId: v.string(),
+    title: v.string(),
+    createdAt: v.number(),
+  }).index("by_user", ["userId", "createdAt"]),
+  messages: defineTable({
+    chatId: v.id("chats"),
+    role: v.union(v.literal("user"), v.literal("assistant")),
+    content: v.string(),
+    createdAt: v.number(),
+  }).index("by_chat", ["chatId", "createdAt"]),
+  documents: defineTable({
+    title: v.string(),
+    source: v.string(),
+    chunk: v.string(),
+    embedding: v.array(v.number()),
+    createdAt: v.number(),
+  }).vectorIndex("by_embedding", {
+    vectorField: "embedding",
+    dimensions: 1024,
+    filterFields: ["source", "title"],
+  }),
 });
-

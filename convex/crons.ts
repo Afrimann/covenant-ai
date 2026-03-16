@@ -3,11 +3,12 @@ import { internal } from "./_generated/api";
 
 const crons = cronJobs();
 
-crons.daily(
+// Run every day at 7:00 AM Nigeria time (WAT, UTC+1)
+crons.cron(
   "generateDailyDevotion",
-  { hourUTC: 5, minuteUTC: 0 },
+  "0 6 * * *", // 6:00 UTC = 7:00 WAT
   internal.devotions.ensureDailyDevotion,
-  {},
+  {}
 );
 
 export default crons;
