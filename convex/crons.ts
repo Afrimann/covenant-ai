@@ -7,7 +7,7 @@ const crons = cronJobs();
 crons.cron(
   "generateDailyDevotion",
   "0 6 * * *", // 6:00 UTC = 7:00 WAT
-  internal.devotions.ensureDailyDevotion,
+  internal.pushNotifications.notifyDailyDevotionSubscribers,
   {}
 );
 

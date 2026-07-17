@@ -59,6 +59,13 @@ export const listSubscriptionsByUser = internalQuery({
   },
 });
 
+export const listAllSubscriptions = internalQuery({
+  args: {},
+  handler: async (ctx) => {
+    return ctx.db.query("pushSubscriptions").collect();
+  },
+});
+
 export const deleteSubscriptionByEndpoint = internalMutation({
   args: { endpoint: v.string() },
   handler: async (ctx, args) => {
