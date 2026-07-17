@@ -23,6 +23,7 @@ import type * as chats from "../chats.js";
 import type * as crons from "../crons.js";
 import type * as devotions from "../devotions.js";
 import type * as documents from "../documents.js";
+import type * as http from "../http.js";
 import type * as ingestion from "../ingestion.js";
 import type * as ingestion_chunker from "../ingestion/chunker.js";
 import type * as ingestion_embedder from "../ingestion/embedder.js";
@@ -31,6 +32,8 @@ import type * as lib_embeddings from "../lib/embeddings.js";
 import type * as lib_grok from "../lib/grok.js";
 import type * as lib_groq from "../lib/groq.js";
 import type * as messages from "../messages.js";
+import type * as pushNotifications from "../pushNotifications.js";
+import type * as pushSubscriptions from "../pushSubscriptions.js";
 
 import type {
   ApiFromModules,
@@ -54,6 +57,7 @@ declare const fullApi: ApiFromModules<{
   crons: typeof crons;
   devotions: typeof devotions;
   documents: typeof documents;
+  http: typeof http;
   ingestion: typeof ingestion;
   "ingestion/chunker": typeof ingestion_chunker;
   "ingestion/embedder": typeof ingestion_embedder;
@@ -62,6 +66,8 @@ declare const fullApi: ApiFromModules<{
   "lib/grok": typeof lib_grok;
   "lib/groq": typeof lib_groq;
   messages: typeof messages;
+  pushNotifications: typeof pushNotifications;
+  pushSubscriptions: typeof pushSubscriptions;
 }>;
 
 /**
